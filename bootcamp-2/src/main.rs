@@ -1,10 +1,24 @@
 fn main() {
-    println!("{}", is_even(21))
+    println!("{}", fib(4))
 }
 
-fn is_even(num: i32) -> bool {
-    if num % 2 == 0 {
-        return true;
+fn fib(num: u32) -> u32 {
+    let mut first = 0;
+    let mut second = 1;
+
+    if num == 0 {
+        return first;
     }
-    return false;
+
+    if num == 1 {
+        return second;
+    }
+
+    for _i in 0..num - 1 {
+        let temp = second;
+        second = second + first;
+        first = temp;
+    }
+
+    return second;
 }
