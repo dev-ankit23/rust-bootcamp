@@ -1,24 +1,8 @@
-fn main() {
-    println!("{}", fib(4))
+fn get_string_len(str: String) -> usize {
+    str.chars().count()
 }
-
-fn fib(num: u32) -> u32 {
-    let mut first = 0;
-    let mut second = 1;
-
-    if num == 0 {
-        return first;
-    }
-
-    if num == 1 {
-        return second;
-    }
-
-    for _i in 0..num - 1 {
-        let temp = second;
-        second = second + first;
-        first = temp;
-    }
-
-    return second;
+fn main() {
+    let name = String::from("Ankit Maurya");
+    let len = get_string_len(name);
+    println!("The len of the string is:- {}", len)
 }
