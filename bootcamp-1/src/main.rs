@@ -1,11 +1,19 @@
-fn main() {
-    let mut s1 = String::from("Hello");
-    let s2 = &mut s1;
-    // update_word(&mut s1);
-    println!("{}", s1);
-    println!("{}", s2);
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
 }
 
-// fn update_word(word: &mut String) {
-//     word.push_str(" World");
-// }
+fn main() {
+    let user1 = User {
+        active: true,
+        username: String::from("Ankit"),
+        email: String::from("ankit@gmail.com"),
+        sign_in_count: 1,
+    };
+    println!("user name is: {:?}", user1.username);
+    println!("user email is: {:?}", user1.email);
+    println!("user is: {:?}", user1.active);
+    println!("user have signin : {:?}", user1.sign_in_count)
+}
