@@ -1,1 +1,8 @@
-/target
+# Rust build files
+target/
+
+# Rust Analyzer
+*.rs.bk
+
+# VS Code
+.vscode/
