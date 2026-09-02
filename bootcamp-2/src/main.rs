@@ -1,8 +1,12 @@
-fn get_string_len(str: String) -> usize {
-    str.chars().count()
+fn create_string() {
+    let s1 = String::from("Hello ");
+    printstr(s2);
 }
+
+fn printstr(s2: String) {
+    println!("{}", s2)
+}
+
 fn main() {
-    let name = String::from("Ankit Mauryax   ");
-    let len = get_string_len(name);
-    println!("The len of the string is:- {}", len)
+    create_string();
 }
