@@ -1,8 +1,12 @@
-fn main() {
-    let mut vec = Vec::new();
-    vec.push(1);
-    vec.push(2);
-    vec.push(3);
+use std::collections::HashMap;
 
-    println!("{:?}", vec)
+fn main() {
+    let mut users = HashMap::new();
+    users.insert(String::from("Ankit"), 19);
+    users.insert(String::from("Arnav"), 19);
+    users.insert(String::from("Bipin"), 19);
+
+    let user1: Option<&i32> = users.get("Bipin");
+
+    println!("{}", user1.unwrap())
 }
