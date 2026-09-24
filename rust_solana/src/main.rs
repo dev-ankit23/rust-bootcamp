@@ -1,31 +1,18 @@
-struct User {
-    name: String,
-    age: i32,
-    gender: Gender,
+struct Rect {
+    width: u32,
+    height: u32,
 }
-enum Gender {
-    Male,
-    Female,
+
+impl Rect {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
 }
 
 fn main() {
-    let user1 = User {
-        name: String::from("Ankit"),
-        age: 19,
-        gender: Gender::Male,
+    let rect = Rect {
+        width: 30,
+        height: 50,
     };
-    let user2 = User {
-        name: String::from("ankit2"),
-        age: 17,
-        gender: Gender::Female,
-    };
-    println!("{}", is_allowed_voitng(user1));
-    println!("{}", is_allowed_voitng(user2));
-}
-fn is_allowed_voitng(u: User) -> bool {
-    if u.age >= 18 {
-        return true;
-    } else {
-        return false;
-    }
+    println!("The area of the rectangle is {}", rect.area());
 }
