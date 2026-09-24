@@ -1,18 +1,16 @@
-struct Rect {
-    width: u32,
-    height: u32,
-}
-
-impl Rect {
-    fn area(&self) -> u32 {
-        self.width * self.height
+fn find_first_a(s: String) -> Option<i32> {
+    for (index, character) in s.chars().enumerate() {
+        if character == 'a' {
+            return Some(index as i32);
+        }
     }
+    return None;
 }
 
 fn main() {
-    let rect = Rect {
-        width: 30,
-        height: 50,
-    };
-    println!("The area of the rectangle is {}", rect.area());
+    let my_string = String::from("hello");
+    match find_first_a(my_string) {
+        Some(index) => println!("The letter 'a' is found at index: {}", index),
+        None => println!("The letter 'a' is not found in the string."),
+    }
 }
